@@ -17,6 +17,10 @@
  ContentTemplate="{DataTemplate local:PlanEntryPage}"
  />
         <ShellContent
+ Title="My Restaurant"
+ ContentTemplate="{DataTemplate local:BreakfastEntryPage}"
+ />
+        <ShellContent
  Title="My Favourite Breakfast Foods"
  ContentTemplate="{DataTemplate local:AboutPage}"
  />

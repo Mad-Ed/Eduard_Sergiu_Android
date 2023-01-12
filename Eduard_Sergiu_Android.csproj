@@ -54,6 +54,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="BreakfastEntryPage.xaml.cs">
+	    <DependentUpon>BreakfastEntryPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="BreakfastPage.xaml.cs">
+	    <DependentUpon>BreakfastPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="AboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -61,6 +70,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="PlanPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="BreakfastEntryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="BreakfastPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="WeekDayPage.xaml">

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace Eduard_Sergiu_Android.Models
 {
@@ -14,5 +15,7 @@ namespace Eduard_Sergiu_Android.Models
         [MaxLength(250)]
         public string Description { get; set; }
         public DateTime Date { get; set; }
+        [ForeignKey(typeof(Breakfast))]
+        public int BreakfastID { get; set; }
     }
 }

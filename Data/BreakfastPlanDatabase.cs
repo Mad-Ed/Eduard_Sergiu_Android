@@ -21,6 +21,7 @@ namespace Eduard_Sergiu_Android.Data
             _database.CreateTableAsync<BreakfastPlan>().Wait();
             _database.CreateTableAsync<WeekDay>().Wait();
             _database.CreateTableAsync<ListWeekday>().Wait();
+            _database.CreateTableAsync<Breakfast>().Wait();
         }
         public Task<List<BreakfastPlan>> GetBreakfastPlanAsync()
         {
@@ -92,6 +93,21 @@ namespace Eduard_Sergiu_Android.Data
         public Task<List<ListWeekday>> GetListWeekday()
         {
             return _database.QueryAsync<ListWeekday>("select * from ListWeekday");
+        }
+        public Task<List<Breakfast>> GetBreakfastsAsync()
+        {
+            return _database.Table<Breakfast>().ToListAsync();
+        }
+        public Task<int> SaveBreakfastAsync(Breakfast breakfast)
+        {
+            if (breakfast.ID != 0)
+            {
+                return _database.UpdateAsync(breakfast);
+            }
+            else
+            {
+                return _database.InsertAsync(breakfast);
+            }
         }
     }
 }
