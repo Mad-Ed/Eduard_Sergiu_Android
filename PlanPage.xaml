@@ -7,6 +7,7 @@
         <Editor Placeholder="Enter the breakfast plan"
  Text="{Binding Description}"
  HeightRequest="50" />
+        <Picker x:Name="BreakfastPicker" Title="Enter Restaurant Name"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />

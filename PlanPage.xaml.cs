@@ -14,6 +14,8 @@ public partial class PlanPage : ContentPage
     {
         var bplan = (BreakfastPlan)BindingContext;
         bplan.Date = DateTime.UtcNow;
+        Breakfast selectedBreakfast = (BreakfastPicker.SelectedItem as Breakfast);
+        bplan.BreakfastID = selectedBreakfast.ID;
         await App.Database.SaveBreakfastPlanAsync(bplan);
         await Navigation.PopAsync();
     }
@@ -26,6 +28,9 @@ public partial class PlanPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+        var items = await App.Database.GetBreakfastsAsync();
+        BreakfastPicker.ItemsSource = (System.Collections.IList)items;
+        BreakfastPicker.ItemDisplayBinding = new Binding("BreakfastDetails");
         var breakfastp = (BreakfastPlan)BindingContext;
 
         planView.ItemsSource = await App.Database.GetListWeekdayAsync(breakfastp.ID);

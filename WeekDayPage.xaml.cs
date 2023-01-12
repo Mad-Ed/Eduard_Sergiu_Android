@@ -14,6 +14,7 @@ public partial class WeekDayPage : ContentPage
     {
         var weekday = (WeekDay)BindingContext;
         await App.Database.SaveWeekDayAsync(weekday);
+
         planView.ItemsSource = await App.Database.GetWeekDayAsync();
     }
     async void OnDeleteButtonClicked(object sender, EventArgs e)
