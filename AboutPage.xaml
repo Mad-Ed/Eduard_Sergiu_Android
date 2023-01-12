@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eduard_Sergiu_Android.AboutPage"
+             Title="My Favourite Breakfast Foods">
+    <ScrollView>
+    <VerticalStackLayout Spacing="10" Margin="10">
+        <Label FontSize="22" FontAttributes="Bold" Text="Pancakes" VerticalOptions="End" />
+        <HorizontalStackLayout Spacing="10">
+                <Image Source="pancakes.png"
+ SemanticProperties.Description="My Favourite Breakfast Foods"
+HeightRequest="200" />
+            </HorizontalStackLayout>
+        <Label Text="◦1 ½ cups all-purpose flour
+◦3 ½ teaspoons baking powder
+◦1 tablespoon white sugar
+◦¼ teaspoon salt, or more to taste
+◦1 ¼ cups milk
+◦3 tablespoons butter, melted
+◦1 egg" />
+        
+        
+        
+        <Label FontSize="22" FontAttributes="Bold" Text="Vegetable Omlet" VerticalOptions="End" />
+        <HorizontalStackLayout Spacing="10">
+            <Image Source="omleta.png"
+ SemanticProperties.Description="asdasdadasdMy Favourite Breakfast Foods"
+HeightRequest="200" />
+        </HorizontalStackLayout>
+        <Label Text="◦2 large eggs
+◦¼ red pepper, chopped
+◦¼ cup Cheddar cheese, grated
+◦a few leaves of fresh baby spinach
+◦2 cherry tomatoes, chopped
+◦salt and pepper
+◦¼ teaspoon butter" />
+        
+        
+        
+        <Label FontSize="22" FontAttributes="Bold" Text="Breakfast Burrito" VerticalOptions="End" />
+        <HorizontalStackLayout Spacing="10">
+            <Image Source="breakfastburrito.png"
+ SemanticProperties.Description="asdMy Favourite Breakfast Foods"
+HeightRequest="200" />
+        </HorizontalStackLayout>
+        <Label Text="◦4 large eggs
+◦¼ teaspoon smoked paprika
+◦¼ teaspoon salt
+◦½ lb spicy sausage (such as chorizo, Italian, or anything you like), removed from casings
+◦1⅓ cups (6 oz) shredded Monterey Jack cheese
+◦4 (10-in) burrito-size flour tortillas
+◦Vegetable oil" />
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
